@@ -4,8 +4,8 @@ class MyHashMap:
         self.hashMap = {}
 
     def put(self, key: int, value: int) -> None:
-        self.hashMap[key] = value
-
+        self.hashMap[key] = value  
+      
     def get(self, key: int) -> int:
         if key in self.hashMap.keys():
             return self.hashMap[key]
@@ -13,9 +13,8 @@ class MyHashMap:
             return -1
 
     def remove(self, key: int) -> None:
-        if key in self.hashMap.keys():
-            self.hashMap.pop(key)
-
+       if key in self.hashMap.keys():
+        self.hashMap.pop(key)
 
 # Your MyHashMap object will be instantiated and called as such:
 # obj = MyHashMap()
