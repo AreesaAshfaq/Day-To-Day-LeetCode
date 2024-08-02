@@ -2,7 +2,6 @@ class MyHashSet:
 
     def __init__(self):
         self.hashSet = set({})
-        print(type(self.hashSet))
     def add(self, key: int) -> None:
         self.hashSet.add(key)        
 
