@@ -6,27 +6,25 @@ class MyStack:
         self.q2 = Queue()
 
     def push(self, x: int) -> None:
-        self.q1.put(x)
+       self.q1.put(x)
 
     def pop(self) -> int:
-        
         for i in range(self.q1.qsize()-1):
             self.q2.put(self.q1.get())
 
         popp = self.q1.get()
 
-        for j in range(self.q2.qsize()):
+        for i in range(self.q2.qsize()):
             self.q1.put(self.q2.get())
-        
-        return popp
 
+        return popp
+      
     def top(self) -> int:
         for i in range(self.q1.qsize()-1):
             self.q2.put(self.q1.get())
 
         topp = self.q1.get()
         self.q2.put(topp)
-
 
         for i in range(self.q2.qsize()):
             self.q1.put(self.q2.get())
