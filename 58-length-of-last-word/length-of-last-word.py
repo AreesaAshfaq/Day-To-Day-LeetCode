@@ -3,7 +3,7 @@ class Solution:
 
         c = 0
         for i in s[::-1]:
-            if i.isspace(): 
+            if i == " ": 
                 if c != 0:
                     break
             else:
