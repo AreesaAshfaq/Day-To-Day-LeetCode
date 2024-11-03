@@ -3,14 +3,12 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        left = 0
-        right = len(s)-1
-        temp = ""
-        while left < right:
-            temp = s[left]
-            s[left] = s[right]
-            s[right] = temp
-            left += 1
-            right -=1
-        return s
+        l, r = 0, len(s)-1
+        while l <= r:
+            s[l], s[r] = s[r], s[l]
+            l += 1
+            r -= 1
 
+
+
+        
