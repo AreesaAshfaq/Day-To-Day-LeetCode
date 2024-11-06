@@ -8,25 +8,28 @@ class MyQueue:
         self.s1.append(x)
 
     def pop(self) -> int:
-        for i in range(len(self.s1)-1):
+        for i in range(len(self.s1)):
             self.s2.append(self.s1.pop())
-        popp = self.s1.pop()
-
-        for i in range(len(self.s2)):
+        print(self.s2)
+        popped = self.s2.pop()
+        for j  in range(len(self.s2)):
             self.s1.append(self.s2.pop())
+        return popped
 
-        return popp    
-       
+
     def peek(self) -> int:
-        return self.s1[0]
+        for i in range(len(self.s1)):
+            self.s2.append(self.s1.pop())
+            
+        topped = self.s2[-1]
+        for j in range(len(self.s2)):
+            self.s1.append(self.s2.pop())
+        return topped
 
     def empty(self) -> bool:
-        # if len(self.s1) == 0:
-        #     return True
-        # else:
-        #     return False
-        return len(self.s1) == 0
-       
+        print(self.s1)
+        return True if len(self.s1) == 0 else False
+
 
 # Your MyQueue object will be instantiated and called as such:
 # obj = MyQueue()
