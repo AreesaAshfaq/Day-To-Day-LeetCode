@@ -4,11 +4,15 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        dic = {}
-        for i in range(len(nums)):
-            if nums[i] in dic:
-                return True
-            else:
-                dic[nums[i]] = i+1
-        return False
+        #Approach 1
+        return len(nums) != len(set(nums))
+
+        #Approach 2
+        # dic = {}
+        # for i in range(len(nums)):
+        #     if nums[i] in dic:
+        #         return True
+        #     else:
+        #         dic[nums[i]] = i+1
+        # return False
         
