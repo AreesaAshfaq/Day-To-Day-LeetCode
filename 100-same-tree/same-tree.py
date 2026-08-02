@@ -4,6 +4,15 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+# Time Complexity: O(h)
+# We follow only one path from the root to the target node using BST property.
+#
+# Space Complexity: O(h)
+# Recursion stack stores function calls based on the height of the tree.
+#
+# h = height of the tree
+
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
         # Both nodes are empty        
@@ -19,4 +28,3 @@ class Solution:
         
         return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
 
-        
