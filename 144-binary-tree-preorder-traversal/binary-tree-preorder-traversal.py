@@ -4,6 +4,14 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+# Time Complexity: O(N)
+# Every node in the binary tree is visited exactly once.
+
+# Space Complexity (Including Output):O(N)
+# The result array stores the values of all N nodes.
+# Recursive call stack requires O(H) space, where H is the height of the tree.
+# Total: O(N) + O(H) = O(N)
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         
