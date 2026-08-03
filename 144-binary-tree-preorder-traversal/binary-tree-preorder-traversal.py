@@ -22,7 +22,7 @@ class Solution:
 
             result.append(node.val)
 
-            #visti left subtree
+            #visit left subtree
             preorder(node.left)
 
             #visit right subtree
