@@ -19,12 +19,12 @@ class Solution:
         while len(heap) > 1:
 
             # Get two largest stones            
-            first = -heapq.heappop(heap)
-            second = -heapq.heappop(heap)
+            y = -heapq.heappop(heap)
+            x = -heapq.heappop(heap)
 
             # If they are different, put the difference back
-            if first != second:
-                heapq.heappush(heap, -(first - second))
+            if x != y:
+                heapq.heappush(heap, -(y - x))
 
         # Return remaining stone        
         if heap:
